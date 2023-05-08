@@ -1,8 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-
+import Layout from "../layout/Layout"
 export default function Home() {
   return (
-   <h1>Next</h1>
+    <Layout>
+        <h1>Prisma</h1>
+    </Layout>
   )
 }
+
