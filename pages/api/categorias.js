@@ -1,7 +1,6 @@
 import {PrismaClient} from 'prisma/prisma-client';
 
 const handler = async (request, response) => {
-
     const prisma = new PrismaClient();
     const categorias = await prisma.categoria.findMany({
         include:{
