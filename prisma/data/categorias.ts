@@ -13,8 +13,8 @@ const categorias = [
         nombre: "Pizzas"
       },
       {
-        icono: "dona",
-        nombre: "Donas"
+        icono: "donuts",
+        nombre: "Donuts"
       },
       {
         icono: "pastel",

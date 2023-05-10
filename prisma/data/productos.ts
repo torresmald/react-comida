@@ -85,87 +85,87 @@ const productos = [
         categoriaId: 1
       },
       {
-        nombre: "Paquete de 3 donas de Chocolate",
+        nombre: "Paquete de 3 donuts de Chocolate",
         precio: 39.9,
-        imagen: "donas_01",
+        imagen: "donuts_01",
         categoriaId: 4
       },
       {
-        nombre: "Paquete de 3 donas Glaseadas",
+        nombre: "Paquete de 3 donuts Glaseadas",
         precio: 39.9,
-        imagen: "donas_02",
+        imagen: "donuts_02",
         categoriaId: 4
       },
       {
         nombre: "Dona de Fresa ",
         precio: 19.9,
-        imagen: "donas_03",
+        imagen: "donuts_03",
         categoriaId: 4
       },
       {
         nombre: "Dona con Galleta de Chocolate ",
         precio: 19.9,
-        imagen: "donas_04",
+        imagen: "donuts_04",
         categoriaId: 4
       },
       {
         nombre: "Dona glass con Chispas Sabor Fresa ",
         precio: 19.9,
-        imagen: "donas_05",
+        imagen: "donuts_05",
         categoriaId: 4
       },
       {
         nombre: "Dona glass con Chocolate ",
         precio: 19.9,
-        imagen: "donas_06",
+        imagen: "donuts_06",
         categoriaId: 4
       },
       {
         nombre: "Dona de Chocolate con MÁS Chocolate ",
         precio: 19.9,
-        imagen: "donas_07",
+        imagen: "donuts_07",
         categoriaId: 4
       },
       {
-        nombre: "Paquete de 3 donas de Chocolate ",
+        nombre: "Paquete de 3 donuts de Chocolate ",
         precio: 39.9,
-        imagen: "donas_08",
+        imagen: "donuts_08",
         categoriaId: 4
       },
       {
-        nombre: "Paquete de 3 donas con Vainilla y Chocolate ",
+        nombre: "Paquete de 3 donuts con Vainilla y Chocolate ",
         precio: 39.9,
-        imagen: "donas_09",
+        imagen: "donuts_09",
         categoriaId: 4
       },
       {
-        nombre: "Paquete de 6 Donas",
+        nombre: "Paquete de 6 donuts",
         precio: 69.9,
-        imagen: "donas_10",
+        imagen: "donuts_10",
         categoriaId: 4
       },
       {
         nombre: "Paquete de 3 Variadas",
         precio: 39.9,
-        imagen: "donas_11",
+        imagen: "donuts_11",
         categoriaId: 4
       },
       {
         nombre: "Dona Natural con Chocolate",
         precio: 19.9,
-        imagen: "donas_12",
+        imagen: "donuts_12",
         categoriaId: 4
       },
       {
-        nombre: "Paquete de 3 Donas de Chocolate con Chispas",
+        nombre: "Paquete de 3 donuts de Chocolate con Chispas",
         precio: 39.9,
-        imagen: "donas_13",
+        imagen: "donuts_13",
         categoriaId: 4
       },
       {
         nombre: "Dona Chocolate y Coco",
         precio: 19.9,
-        imagen: "donas_14",
+        imagen: "donuts_14",
         categoriaId: 4
       },
       {
