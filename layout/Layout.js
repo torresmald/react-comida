@@ -1,7 +1,12 @@
 import Sidebar from '../components/Sidebar';
 import Head from 'next/head';
 import Modal from 'react-modal';
+import ModalProducto from '../components/ModalProducto';
+import Navegacion from '../components/Navegacion';
 import useQuiosco from '../hooks/useQuiosco';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const customStyles = {
   content: {
     top: '50%',
@@ -13,7 +18,6 @@ const customStyles = {
   },
 };
 Modal.setAppElement('#__next');
-
 
 export default function Layout({ children, pagina }) {
   const {modal} = useQuiosco();
@@ -29,15 +33,17 @@ export default function Layout({ children, pagina }) {
         </aside>
         <main className='md:w-8/12 xl:w-3/4 2xl:w-4/5 h-screen overflow-y-scroll'>
           <div className='p-10'>
+            <Navegacion />
             {children}
           </div>
         </main>
       </div>
       {modal && (
         <Modal isOpen={modal} style={customStyles}>
-           Hola
+          <ModalProducto />
         </Modal>
       )}
+      <ToastContainer />
     </>
   )
 }
