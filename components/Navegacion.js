@@ -1,8 +1,9 @@
 import { useRouter } from 'next/router';
+
 const nav = [
     { paso: 1, nombre: 'Menú', url: '/' },
-    { paso: 2, nombre: 'Resumen', url: '/resumen' },
-    { paso: 3, nombre: 'Total', url: '/total' },
+    { paso: 2, nombre: 'Resumen', url: '/Resumen' },
+    { paso: 3, nombre: 'Total', url: '/Total' },
 ]
 
 function Navegacion() {

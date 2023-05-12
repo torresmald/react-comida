@@ -2,7 +2,7 @@ import Layout from "../layout/Layout";
 import { useEffect, useCallback } from "react";
 import useQuiosco from "../hooks/useQuiosco";
 import { formatearPrecio } from "../helpers";
-function total() {
+function Total() {
     const {pedido, handleNombre, nombre, enviarPedido, total} = useQuiosco()
     const comprobarPedido = useCallback(() => {
         return pedido.length === 0 || nombre === '' || nombre.length < 3;
@@ -31,4 +31,4 @@ function total() {
     );
 }
 
-export default total;
+export default Total;

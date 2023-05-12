@@ -2,6 +2,8 @@ import Image from "next/image";
 import useQuiosco from "../hooks/useQuiosco";
 import { formatearPrecio } from "../helpers";
 import { useState, useEffect } from "react";
+
+
 function ModalProducto() {
   const { productoElegido, handleChangeModal, handleAgregarPedido, pedido } = useQuiosco();
   const [cantidad, setCantidad] = useState(1);

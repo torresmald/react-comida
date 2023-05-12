@@ -2,7 +2,7 @@ import AdminLayout from "../layout/AdminLayout";
 import Pedido from "../components/Pedido";
 import axios from 'axios';
 import useSwr from 'swr';
-function admin() {
+function Admin() {
 
     const fetcher = () => axios('/api/ordenes').then(datos => datos.data);
     const {data, error, isLoading} = useSwr('/api/ordenes', fetcher, {refreshInterval: 300})
@@ -18,4 +18,4 @@ function admin() {
     );
 }
 
-export default admin;
+export default Admin;
