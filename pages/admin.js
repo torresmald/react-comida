@@ -29,7 +29,6 @@ function Admin() {
             <div className="mt-20">
                 <p className="font-black text-3xl text-amber-500">{formatearFecha(Date.now())}</p>
                 {sumaDiaria && <p className="font-black text-4xl text-red-500">Total Recaudado: {formatearPrecio(sumaDiaria)}</p>}
-
             </div>
         </AdminLayout>
     );
