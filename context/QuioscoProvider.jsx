@@ -2,6 +2,7 @@ import { useState, useEffect, createContext } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
+import { formatearFecha } from '../helpers';
 const QuioscoContext = createContext();
 
 const QuioscoProvider = ({ children }) => {
@@ -12,6 +13,7 @@ const QuioscoProvider = ({ children }) => {
     const [pedido, setPedido] = useState([]);
     const [nombre, setNombre] = useState('');
     const [total, setTotal] = useState(0);
+    
 
     const router = useRouter();
 
@@ -52,7 +54,6 @@ const QuioscoProvider = ({ children }) => {
                 progress: undefined,
                 theme: "colored",
             })
-
         }
         setModal(false)
     };
@@ -64,7 +65,6 @@ const QuioscoProvider = ({ children }) => {
     const handleEliminarProducto = (id) => {
         const pedidoActualizado = pedido.filter((producto) => producto.id !== id);
         setPedido(pedidoActualizado);
-
     }
     const handleNombre = (nombre) => {
         setNombre(nombre);
@@ -72,7 +72,9 @@ const QuioscoProvider = ({ children }) => {
     const enviarPedido = async (event) => {
         event.preventDefault()
         try {
-            const { data } = await axios.post('/api/ordenes', {pedido, nombre, total, fecha: Date.now().toString()});
+            const fechaFormateada = formatearFecha(Date.now());
+            const { data } = await axios.post('/api/ordenes', {pedido, nombre, total, fecha: fechaFormateada});
+            const {data : datosTotales} = await axios.post('/api/total', {fecha: Date.now(), total: total})
         } catch (error) {
             console.log(error);
         }
@@ -98,7 +100,8 @@ const QuioscoProvider = ({ children }) => {
     }, []);
     useEffect(() => {
         setCategoriaActual(categorias[0])
-    }, [categorias])
+    }, [categorias]);
+
     return (
         <QuioscoContext.Provider value=
             {{

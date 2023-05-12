@@ -34,3 +34,9 @@ model Orden {
   pedido Json
   estado Boolean @default(false)
 }
+
+model Total {
+  id Int @id @default(autoincrement())
+  fecha String
+  total Float
+}
