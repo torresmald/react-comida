@@ -13,7 +13,6 @@ function ModalProducto() {
         const productoEdicion = pedido.find((pedidoState) => pedidoState.id === productoElegido.id);
         setEdicion(true)
         setCantidad(productoEdicion.cantidad)
-        
       }
   }, [productoElegido, pedido])
   return (
