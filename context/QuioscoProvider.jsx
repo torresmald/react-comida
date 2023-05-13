@@ -13,7 +13,10 @@ const QuioscoProvider = ({ children }) => {
     const [pedido, setPedido] = useState([]);
     const [nombre, setNombre] = useState('');
     const [total, setTotal] = useState(0);
-    
+    // const [totalDia, setTotalDia] = useState({
+    //     total: 0,
+    //     fecha: formatearFecha(Date.now())
+    // });
 
     const router = useRouter();
 

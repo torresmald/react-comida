@@ -14,8 +14,6 @@ const handler = async (request, response) => {
         })
         response.status(200).json(pedidoActualizado)
     }
-
-
 }
 
 export default handler;
