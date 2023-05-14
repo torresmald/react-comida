@@ -9,15 +9,20 @@ const handler = async (request, response) => {
         }
     })
     const totalHistorico = await prisma.total.findMany({})
-    response.status(200).json({totalHoy, totalHistorico })
+    response.status(200).json({ totalHoy, totalHistorico })
     if (request.method === 'POST') {
-        const fechaFormateada = formatearFecha(request.body.fecha)
-        const total = await prisma.total.create({
-            data: {
-                fecha: fechaFormateada,
-                total: request.body.total,
-            }
-        })
+        try {
+            const fechaFormateada = formatearFecha(request.body.fecha)
+            const total = await prisma.total.create({
+                data: {
+                    fecha: fechaFormateada,
+                    total: request.body.total,
+                }
+            })
+        } catch (error) {
+            console.log(error);
+        }
+
         response.status(200).json(total);
     }
 }
