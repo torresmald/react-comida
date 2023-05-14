@@ -72,8 +72,13 @@ const QuioscoProvider = ({ children }) => {
         event.preventDefault()
         try {
             const fechaFormateada = formatearFecha(Date.now());
-            const { data } = await axios.post('/api/ordenes', {pedido, nombre, total, fecha: fechaFormateada});
-            const {data : datosTotales} = await axios.post('/api/total', {fecha: Date.now(), total: total})
+            const pedidoPromise = axios.post('/api/ordenes', { pedido, nombre, total, fecha: fechaFormateada });
+            const totalPromise = axios.post('/api/total', { fecha: Date.now(), total: total });
+            const [pedidoRes, totalRes] = await Promise.all([pedidoPromise, totalPromise]);
+            const responseData = {
+                pedido: pedidoRes.data,
+                total: totalRes.data
+            };
         } catch (error) {
             console.log(error);
         }
