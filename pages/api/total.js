@@ -16,7 +16,6 @@ const handler = async (request, response) => {
             const total = await prisma.total.create({
                 data: {
                     fecha: fechaFormateada,
-                    total: request.body.total,
                 }
             })
         } catch (error) {
